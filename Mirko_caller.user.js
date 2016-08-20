@@ -5,7 +5,8 @@
 // @include		http://www.wykop.pl/ludzie/*
 // @include		http://www.wykop.pl/mikroblog/*
 // @include		http://www.wykop.pl/wpis/*
-// @version     1
+// @include		http://www.wykop.pl/moj/*
+// @version     1.01
 // @author        toussaint1
 // @updateURL     https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
 // @downloadURL   https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
