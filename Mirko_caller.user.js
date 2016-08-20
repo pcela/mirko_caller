@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Mirko caller
-// @namespace   caller
+// @namespace   https://github.com/toussaint1
+// @description	skrypt ułatwia wołanie ludzi do określonych tagów na #randomanimeshit   
 // @include     http://www.wykop.pl/tag/*
 // @include		http://www.wykop.pl/ludzie/*
 // @include		http://www.wykop.pl/mikroblog/*
