@@ -7,7 +7,7 @@
 // @include     http://www.wykop.pl/mikroblog/*
 // @include     http://www.wykop.pl/wpis/*
 // @include     http://www.wykop.pl/moj/*
-// @version     1.02
+// @version     1.03
 // @author      toussaint1
 // @updateURL   https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
 // @downloadURL https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
@@ -34,6 +34,7 @@ $(document).ready(function(){
 		var textTagsList = textAreaObject.val().match(/#([a-zA-Z0-9]+)/g); 
 		var calledUsersString = '';
 		var calledUsers = [];
+		var currentlyLoggedUser = '@' + $('.logged-user div.dropdown ul li:nth-child(1)').text().trim();
 
 		$.getJSON('https://spreadsheets.google.com/feeds/list/'+ spreadsheetId +'/od6/public/values?alt=json', function(callList) {
       
@@ -41,6 +42,11 @@ $(document).ready(function(){
 			
 			for (var i = 0; i < entries.length; i++){
 				var userName = entries[i]['gsx$user']['$t'];
+				
+				// don't check currently logged user
+				if (currentlyLoggedUser === userName)
+					continue;
+
 				var tagsList = entries[i]['gsx$tags']['$t'].split(' ');
 				for (var j = 0; j < tagsList.length; j++){
 					//if at least one tag is matching, add user to calledUsers list
