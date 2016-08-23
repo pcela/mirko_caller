@@ -7,7 +7,7 @@
 // @include     http://www.wykop.pl/mikroblog/*
 // @include     http://www.wykop.pl/wpis/*
 // @include     http://www.wykop.pl/moj/*
-// @version     1.03
+// @version     1.04
 // @author      toussaint1
 // @updateURL   https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
 // @downloadURL https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
@@ -83,6 +83,19 @@ $(document).ready(function(){
 	
 	
 });
+
+var bindCommentFormOld = wykop.bindCommentForm;
+
+// override default function
+wykop.bindCommentForm = function(selector,selectorFromCallback){
+	
+	var returnValue = bindCommentFormOld(selector,selectorFromCallback);
+	
+	if (selectorFromCallback != null && selectorFromCallback.startsWith('#commentForm'))
+		$('<div class="button" id ="callerButton" style="margin-left:4px;"><i>' + buttonName + '</i><a id="callerButtonLoader" /></a>').insertAfter($('form' + selectorFromCallback + ' fieldset.row.buttons.dnone a.button.openAddMediaOverlay'));
+	
+	return returnValue;
+};
 
 function addGlobalStyle(css) {
     var head, style;
