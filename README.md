@@ -2,7 +2,7 @@
 
 ##Opis skryptu
 
-Skrypt powstał po to aby ułatwić wołanie użytkowników do wpisów z wybranymi przez nich tagami na serwisie wykop.pl.
+Skrypt powstał na potrzeby tagu #randomanimeshit na serwisie Wykop.pl, po to aby ułatwić wołanie ludzi do wpisów z wybranymi przez nich tagami.
 Jego instalacja spowoduje wyświetlanie się przycisku "mirko caller" na formularzu do tworzenia/edycji wpisu na mikroblogu (obok ikonki aparatu używanej do dodawania obrazków/filmów do wpisu)
 Po kliknięciu przycisku we wpisie zostaną znalezione wszystkie użyte tagi, a następnie na ich podstawie zostanie na końcu doklejona lista wołanych użytkowników.
 
