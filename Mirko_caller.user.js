@@ -2,12 +2,12 @@
 // @name        Mirko caller
 // @namespace   https://github.com/toussaint1
 // @description	skrypt ułatwia wołanie ludzi do określonych tagów na #randomanimeshit
-// @include     http://www.wykop.pl/tag/*
-// @include     http://www.wykop.pl/ludzie/*
-// @include     http://www.wykop.pl/mikroblog/*
-// @include     http://www.wykop.pl/wpis/*
-// @include     http://www.wykop.pl/moj/*
-// @version     1.04
+// @include     https://www.wykop.pl/tag/*
+// @include     https://www.wykop.pl/ludzie/*
+// @include     https://www.wykop.pl/mikroblog/*
+// @include     https://www.wykop.pl/wpis/*
+// @include     https://www.wykop.pl/moj/*
+// @version     1.05
 // @author      toussaint1
 // @updateURL   https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
 // @downloadURL https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js

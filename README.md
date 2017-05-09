@@ -19,6 +19,9 @@ Skrypt można pobrać z następującej lokalizacji:
 
 ##Changelog
 
+###v. 1.05 (09.05.2017)
+- dostosowanie skryptu po wprowadzeniu https na wykopie
+
 ###v. 1.04 (23.08.2016)
 - poprawienie błędu powodującego brak przycisku przy edycji komentarza
 
