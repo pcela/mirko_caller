@@ -7,10 +7,10 @@
 // @include     https://www.wykop.pl/mikroblog/*
 // @include     https://www.wykop.pl/wpis/*
 // @include     https://www.wykop.pl/moj/*
-// @version     1.05
+// @version     1.06
 // @author      toussaint1
-// @updateURL   https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
-// @downloadURL https://raw.githubusercontent.com/toussaint1/mirko_caller/master/Mirko_caller.user.js
+// @updateURL   https://github.com/pcela/mirko_caller/raw/master/Mirko_caller.user.js
+// @downloadURL https://github.com/pcela/mirko_caller/raw/master/Mirko_caller.user.js
 // @grant       none
 // ==/UserScript==
 
@@ -19,8 +19,9 @@
 		tagsSeparator : '&',
 		notFoundUsersToCallMessage : '',
 		buttonName : 'mirko caller',
-		spreadsheetId : '1pJOE-61smYpsabKIQBLJdsrGr2bZa4-8tPINtv1EfQQ',
+		spreadsheetId : '1qxDMSC02YnUtX7P8TJ6BtDk0ZJ9BAqAIwI88eNg0VWw',
 		loaderIconUrl : 'data:image/gif;base64,R0lGODlhEAALAPQAAIfg/zWNqnrT8nfQ7oDZ9zaOqzWNqkObuV621FOryXDJ5z+XtUykwmG511Wty3HK6EGYtjaNq02lw3/X9nnT8YPc+kaevHvU8oLb+m/H5mjB3nXO7IHZ+AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA',
+		apikey : 'AIzaSyBIC5JGdFticd5Kn6Dn4cHwpfIkJ8_gpAo',
 		callerFunction :  function(){
 
 			var loaderObject = $(this).find('a#callerButtonLoader');
@@ -29,7 +30,7 @@
 
 			loaderObject.addClass( "isloading" );
 
-			$.getJSON('https://spreadsheets.google.com/feeds/list/'+ MirkoCaller.spreadsheetId +'/od6/public/values?alt=json', function(callList) {
+			$.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+ MirkoCaller.spreadsheetId +'/values/Sheet1?alt=json&key='+ 'MirkoCaller.apikey +'', function(callList) {
 
 				var calledUsers = [];
 				var currentlyLoggedUser = '@' + $('.logged-user div.dropdown ul li:nth-child(1)').text().trim();
